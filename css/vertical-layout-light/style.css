@@ -10188,6 +10188,11 @@ pre code {
   background-color: #eaeaf1;
 }
 
+.hover-cursor:hover {
+  color: #292621;
+  background-color: #a1ff91;
+}
+
 .table-primary,
 .table-primary > th,
 .table-primary > td {
