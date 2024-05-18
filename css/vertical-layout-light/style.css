@@ -10193,6 +10193,12 @@ pre code {
   background-color: #a1ff91;
 }
 
+@media screen and (max-width: 600px) {
+  .abc {
+       font-size: 16px; /* Adjust the font size as needed */
+   }
+}
+
 .table-primary,
 .table-primary > th,
 .table-primary > td {
