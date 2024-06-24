@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <link rel="shortcut icon" href="../../images/favicon.png" />
+  
 </head>
 
 <body>
@@ -115,8 +116,9 @@
                     <h2 class="mb-0 abc"><b>From Modest Dreams to Sustainable Triumphs: The Tumaliktik Farmers' Journey Towards Agricultural Resilience</b>​</h2>
                   </blockquote>
                   <blockquote class="">
-                    <p class="mb-0 abc">Lovely Joy L. Saludez | DA-Caraga​</p>
+                    <p class="mb-0 abc">Lovely Joy L. Saludez | DA-Caraga | Viewers: <b class="website-counter"></b>​</p> 
                   </blockquote>
+                  
                   <blockquote class="">
                     <p class="mb-0 abc">"At first, our association's dreams were modest, just enough to sustain us as rice farmers day by day. Yet, we soon realized that to fulfill our aspirations for our families, we needed to aim higher," shared Merlina Plaza, Chairperson of the Tumaliktik Farmers Association. "The desire to secure a better future through farming led us to redouble our efforts."</p>
                   </blockquote>
@@ -190,6 +192,8 @@
             </div>
 
             
+
+            
           </div>
         </div>
         <!-- content-wrapper ends -->
@@ -217,6 +221,28 @@
   <script src="../../js/template.js"></script>
   <script src="../../js/settings.js"></script>
   <script src="../../js/todolist.js"></script>
+  <script>
+    var counterContainer = document.querySelector(".website-counter");
+    var resetButton = document.querySelector("#reset");
+    var visitCount = localStorage.getItem("page_view");
+
+    // Check if page_view entry is present
+    if (visitCount) {
+      visitCount = Number(visitCount) + 1;
+      localStorage.setItem("page_view", visitCount);
+    } else {
+      visitCount = 1;
+      localStorage.setItem("page_view", 1);
+    }
+    counterContainer.innerHTML = visitCount;
+
+    // Adding onClick event listener
+    resetButton.addEventListener("click", () => {
+      visitCount = 1;
+      localStorage.setItem("page_view", 1);
+      counterContainer.innerHTML = visitCount;
+    });
+  </script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
