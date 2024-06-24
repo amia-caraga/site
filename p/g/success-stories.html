@@ -225,24 +225,36 @@
     var counterContainer = document.querySelector(".website-counter");
     var resetButton = document.querySelector("#reset");
     var visitCount = localStorage.getItem("page_view");
+    var sessionVisit = sessionStorage.getItem("session_visit");
 
-    // Check if page_view entry is present
-    if (visitCount) {
-      visitCount = Number(visitCount) + 1;
-      localStorage.setItem("page_view", visitCount);
+    // Check if session_visit entry is present
+    if (!sessionVisit) {
+        // Increment visitCount in localStorage if this is a new session
+        if (visitCount) {
+            visitCount = Number(visitCount) + 1;
+            localStorage.setItem("page_view", visitCount);
+        } else {
+            visitCount = 1;
+            localStorage.setItem("page_view", 1);
+        }
+        // Set sessionVisit to true for this session
+        sessionStorage.setItem("session_visit", "true");
     } else {
-      visitCount = 1;
-      localStorage.setItem("page_view", 1);
+        // Use the existing visit count from localStorage
+        visitCount = localStorage.getItem("page_view");
     }
+
     counterContainer.innerHTML = visitCount;
 
     // Adding onClick event listener
     resetButton.addEventListener("click", () => {
-      visitCount = 1;
-      localStorage.setItem("page_view", 1);
-      counterContainer.innerHTML = visitCount;
+        visitCount = 1;
+        localStorage.setItem("page_view", 1);
+        sessionStorage.setItem("session_visit", "true");
+        counterContainer.innerHTML = visitCount;
     });
-  </script>
+</script>
+
   <!-- endinject -->
   <!-- Custom js for this page-->
   <!-- End custom js for this page-->
