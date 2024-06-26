@@ -118,23 +118,32 @@
                     <p class="mb-0 abc">Lovely Joy L. Saludez | DA-Caraga​</p>
                   </blockquote>
                   <div class="social-buttons mb-3">
-                    <button type="button" class="btn btn-social-icon btn-outline-facebook" 
-                            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')">
-                      <i class="ti-facebook"></i>
-                    </button>
-                    <button type="button" class="btn btn-social-icon btn-outline-twitter" 
-                            onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank')">
-                      <i class="ti-twitter-alt"></i>
-                    </button>
-                    <button type="button" class="btn btn-social-icon btn-outline-linkedin" 
-                            onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title), '_blank')">
-                      <i class="ti-linkedin"></i>
-                    </button>
-                    <button type="button" class="btn btn-social-icon btn-outline-google" 
-                            onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href), '_blank')">
-                      <i class="ti-google"></i>
-                    </button>
-                  </div>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={}&ref=4" target="_blank" onclick="event.preventDefault(); window.open(this.href, '_blank'); return false;">
+                        <button type="button" class="btn btn-social-icon btn-outline-facebook">
+                            <i class="ti-facebook"></i>
+                        </button>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/intent/tweet?url={}&text={}" target="_blank" onclick="event.preventDefault(); window.open(this.href, '_blank'); return false;">
+                        <button type="button" class="btn btn-social-icon btn-outline-twitter">
+                            <i class="ti-twitter-alt"></i>
+                        </button>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={}&title={}&applied=false" target="_blank" onclick="event.preventDefault(); window.open(this.href, '_blank'); return false;">
+                        <button type="button" class="btn btn-social-icon btn-outline-linkedin">
+                            <i class="ti-linkedin"></i>
+                        </button>
+                    </a>
+                    <!-- Google Mail -->
+                    <a href="mailto:?subject={}&body={}" target="_blank" onclick="event.preventDefault(); window.open(this.href, '_blank'); return false;">
+                        <button type="button" class="btn btn-social-icon btn-outline-google">
+                            <i class="ti-google"></i>
+                        </button>
+                    </a>
+                </div>
+                
                   <blockquote class="">
                     <p class="mb-0 abc">"At first, our association's dreams were modest, just enough to sustain us as rice farmers day by day. Yet, we soon realized that to fulfill our aspirations for our families, we needed to aim higher," shared Merlina Plaza, Chairperson of the Tumaliktik Farmers Association. "The desire to secure a better future through farming led us to redouble our efforts."</p>
                   </blockquote>
